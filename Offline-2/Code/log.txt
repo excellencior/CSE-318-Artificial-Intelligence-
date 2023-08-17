@@ -1,0 +1,289 @@
+
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 2
+        Heuristic Parameters: 1 and (1, 2)
+        depth: 3
+        # Player1 won: 67 times with heuristic 1
+        # Player2 won: 30 times with heuristic 2
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 3
+        Heuristic Parameters: 1 and (1, 2, 3)
+        depth: 3
+        # Player1 won: 55 times with heuristic 1
+        # Player2 won: 33 times with heuristic 3
+        # Match drawn: 12
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 4
+        Heuristic Parameters: 1 and (1, 2, 3, 4)
+        depth: 3
+        # Player1 won: 51 times with heuristic 1
+        # Player2 won: 42 times with heuristic 4
+        # Match drawn: 7
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 1
+        Heuristic Parameters: (1, 2) and 1
+        depth: 3
+        # Player1 won: 31 times with heuristic 2
+        # Player2 won: 64 times with heuristic 1
+        # Match drawn: 5
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 3
+        Heuristic Parameters: (1, 2) and (1, 2, 3)
+        depth: 3
+        # Player1 won: 51 times with heuristic 2
+        # Player2 won: 43 times with heuristic 3
+        # Match drawn: 6
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 4
+        Heuristic Parameters: (1, 2) and (1, 2, 3, 4)
+        depth: 3
+        # Player1 won: 25 times with heuristic 2
+        # Player2 won: 69 times with heuristic 4
+        # Match drawn: 6
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 1
+        Heuristic Parameters: (1, 2, 3) and 1
+        depth: 3
+        # Player1 won: 10 times with heuristic 3
+        # Player2 won: 88 times with heuristic 1
+        # Match drawn: 2
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 2
+        Heuristic Parameters: (1, 2, 3) and (1, 2)
+        depth: 3
+        # Player1 won: 78 times with heuristic 3
+        # Player2 won: 16 times with heuristic 2
+        # Match drawn: 6
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 4
+        Heuristic Parameters: (1, 2, 3) and (1, 2, 3, 4)
+        depth: 3
+        # Player1 won: 61 times with heuristic 3
+        # Player2 won: 36 times with heuristic 4
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 1
+        Heuristic Parameters: (1, 2, 3, 4) and 1
+        depth: 3
+        # Player1 won: 20 times with heuristic 4
+        # Player2 won: 73 times with heuristic 1
+        # Match drawn: 7
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 2
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2)
+        depth: 3
+        # Player1 won: 74 times with heuristic 4
+        # Player2 won: 21 times with heuristic 2
+        # Match drawn: 5
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 3
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2, 3)
+        depth: 3
+        # Player1 won: 58 times with heuristic 4
+        # Player2 won: 38 times with heuristic 3
+        # Match drawn: 4
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 2
+        Heuristic Parameters: 1 and (1, 2)
+        depth: 4
+        # Player1 won: 54 times with heuristic 1
+        # Player2 won: 43 times with heuristic 2
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 3
+        Heuristic Parameters: 1 and (1, 2, 3)
+        depth: 4
+        # Player1 won: 56 times with heuristic 1
+        # Player2 won: 43 times with heuristic 3
+        # Match drawn: 1
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 4
+        Heuristic Parameters: 1 and (1, 2, 3, 4)
+        depth: 4
+        # Player1 won: 53 times with heuristic 1
+        # Player2 won: 45 times with heuristic 4
+        # Match drawn: 2
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 1
+        Heuristic Parameters: (1, 2) and 1
+        depth: 4
+        # Player1 won: 31 times with heuristic 2
+        # Player2 won: 65 times with heuristic 1
+        # Match drawn: 4
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 3
+        Heuristic Parameters: (1, 2) and (1, 2, 3)
+        depth: 4
+        # Player1 won: 0 times with heuristic 2
+        # Player2 won: 100 times with heuristic 3
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 4
+        Heuristic Parameters: (1, 2) and (1, 2, 3, 4)
+        depth: 4
+        # Player1 won: 0 times with heuristic 2
+        # Player2 won: 100 times with heuristic 4
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 1
+        Heuristic Parameters: (1, 2, 3) and 1
+        depth: 4
+        # Player1 won: 1 times with heuristic 3
+        # Player2 won: 95 times with heuristic 1
+        # Match drawn: 4
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 2
+        Heuristic Parameters: (1, 2, 3) and (1, 2)
+        depth: 4
+        # Player1 won: 30 times with heuristic 3
+        # Player2 won: 67 times with heuristic 2
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 4
+        Heuristic Parameters: (1, 2, 3) and (1, 2, 3, 4)
+        depth: 4
+        # Player1 won: 37 times with heuristic 3
+        # Player2 won: 55 times with heuristic 4
+        # Match drawn: 8
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 1
+        Heuristic Parameters: (1, 2, 3, 4) and 1
+        depth: 4
+        # Player1 won: 7 times with heuristic 4
+        # Player2 won: 92 times with heuristic 1
+        # Match drawn: 1
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 2
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2)
+        depth: 4
+        # Player1 won: 17 times with heuristic 4
+        # Player2 won: 83 times with heuristic 2
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 3
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2, 3)
+        depth: 4
+        # Player1 won: 26 times with heuristic 4
+        # Player2 won: 72 times with heuristic 3
+        # Match drawn: 2
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 2
+        Heuristic Parameters: 1 and (1, 2)
+        depth: 5
+        # Player1 won: 58 times with heuristic 1
+        # Player2 won: 39 times with heuristic 2
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 3
+        Heuristic Parameters: 1 and (1, 2, 3)
+        depth: 5
+        # Player1 won: 51 times with heuristic 1
+        # Player2 won: 48 times with heuristic 3
+        # Match drawn: 1
+        
+        -----------Statistic----------
+        Heuristic IDs: 1 vs 4
+        Heuristic Parameters: 1 and (1, 2, 3, 4)
+        depth: 5
+        # Player1 won: 33 times with heuristic 1
+        # Player2 won: 64 times with heuristic 4
+        # Match drawn: 3
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 1
+        Heuristic Parameters: (1, 2) and 1
+        depth: 5
+        # Player1 won: 19 times with heuristic 2
+        # Player2 won: 70 times with heuristic 1
+        # Match drawn: 11
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 3
+        Heuristic Parameters: (1, 2) and (1, 2, 3)
+        depth: 5
+        # Player1 won: 58 times with heuristic 2
+        # Player2 won: 42 times with heuristic 3
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 2 vs 4
+        Heuristic Parameters: (1, 2) and (1, 2, 3, 4)
+        depth: 5
+        # Player1 won: 100 times with heuristic 2
+        # Player2 won: 0 times with heuristic 4
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 1
+        Heuristic Parameters: (1, 2, 3) and 1
+        depth: 5
+        # Player1 won: 14 times with heuristic 3
+        # Player2 won: 86 times with heuristic 1
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 2
+        Heuristic Parameters: (1, 2, 3) and (1, 2)
+        depth: 5
+        # Player1 won: 0 times with heuristic 3
+        # Player2 won: 100 times with heuristic 2
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 3 vs 4
+        Heuristic Parameters: (1, 2, 3) and (1, 2, 3, 4)
+        depth: 5
+        # Player1 won: 28 times with heuristic 3
+        # Player2 won: 68 times with heuristic 4
+        # Match drawn: 4
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 1
+        Heuristic Parameters: (1, 2, 3, 4) and 1
+        depth: 5
+        # Player1 won: 25 times with heuristic 4
+        # Player2 won: 67 times with heuristic 1
+        # Match drawn: 8
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 2
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2)
+        depth: 5
+        # Player1 won: 0 times with heuristic 4
+        # Player2 won: 100 times with heuristic 2
+        # Match drawn: 0
+        
+        -----------Statistic----------
+        Heuristic IDs: 4 vs 3
+        Heuristic Parameters: (1, 2, 3, 4) and (1, 2, 3)
+        depth: 5
+        # Player1 won: 72 times with heuristic 4
+        # Player2 won: 26 times with heuristic 3
+        # Match drawn: 2
