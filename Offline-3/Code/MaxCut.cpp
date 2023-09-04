@@ -7,10 +7,13 @@
 using namespace std;
 typedef long long ll;
 
+#define SETX 0
+#define SETY 1
 const int N = 1e6;
 
 ll sigmaX[N], sigmaY[N];
 map<pair<ll,ll>, ll> edges;
+map< ll, vector< pair<ll,ll> > > adj;
 set<ll> V, X, Y; // the two sets in max cut
 pair<ll,ll> maxWeightEdge;
 
@@ -103,12 +106,28 @@ ll getSumX(int node) {
     return sum;
 }
 
+void updateAdjacentNodes(ll node, int inSet, string operation) {
+    for (pair<ll,ll> adjNode: adj[node]) {
+        if (inSet == SETX) {
+            if (operation == "add") sigmaY[adjNode.first] += adjNode.second;
+            else if (operation == "remove") sigmaY[adjNode.first] -= adjNode.second;
+        }
+        else {
+            if (operation == "add") sigmaX[adjNode.first] += adjNode.second;
+            else if (operation == "remove") sigmaX[adjNode.first] -= adjNode.second;
+        }
+    }
+}
+
 void semiGreedyMaxCut() {
     ll val = 0;
     double alpha = getRealRandom(1.0);
 
     ll maxwt = getMaxWeight();
     ll minwt = getMinWeight();
+
+    X.clear();
+    Y.clear();
     
     double miu = minwt + alpha*(maxwt - minwt);
     vector<pair<ll, ll>> RCLe = getRCLe(miu);
@@ -117,6 +136,9 @@ void semiGreedyMaxCut() {
 
     X.insert(randEdge.first);
     Y.insert(randEdge.second);
+
+    updateAdjacentNodes(randEdge.first, SETX, "add");
+    updateAdjacentNodes(randEdge.second, SETY, "add");
 
     set<ll> V_rem(V.begin(), V.end());
     // V' = V \ (X union Y)
@@ -129,8 +151,8 @@ void semiGreedyMaxCut() {
         maxsigmaX = maxsigmaY = LONG_LONG_MIN;
 
         for (ll v : V_rem) {
-            sigmaX[v] = getSumY(v);
-            sigmaY[v] = getSumX(v);
+            // sigmaX[v] = getSumY(v);
+            // sigmaY[v] = getSumX(v);
 
             maxsigmaX = max(sigmaX[v], maxsigmaX);
             minsigmaX = min(sigmaX[v], minsigmaX);
@@ -145,10 +167,16 @@ void semiGreedyMaxCut() {
         vector<ll> RCLv = getRCLv(miu, V_rem);
         ll v = getRandomVertex(RCLv);
 
-        if (sigmaX[v] > sigmaY[v])
-            X.insert(v), V_rem.erase(v);
-        else
-            Y.insert(v), V_rem.erase(v);
+        if (sigmaX[v] > sigmaY[v]) {
+            X.insert(v);
+            V_rem.erase(v);
+            updateAdjacentNodes(v, SETX, "add");
+        }
+        else {
+            Y.insert(v);
+            V_rem.erase(v);
+            updateAdjacentNodes(v, SETY, "add");
+        }
     }
 }
 
@@ -206,21 +234,24 @@ void localSearch() {
         change = false;
 
         for (ll v: V) {
-            sigmaX[v] = getSumY(v);
-            sigmaY[v] = getSumX(v);
+            // sigmaX[v] = getSumY(v);
+            // sigmaY[v] = getSumX(v);
 
-            if (X.find(v) != X.end() and (sigmaY[v] > sigmaX[v]))
-                X.erase(v), Y.insert(v), change = true;
-            if (Y.find(v) != Y.end() and (sigmaX[v] > sigmaY[v]))
-                Y.erase(v), X.insert(v), change = true;
+            if (X.find(v) != X.end() and (sigmaY[v] > sigmaX[v])) {
+                X.erase(v);
+                Y.insert(v);
+                updateAdjacentNodes(v, SETX, "remove");
+                updateAdjacentNodes(v, SETY, "add");
+                change = true;
+            }
+            if (Y.find(v) != Y.end() and (sigmaX[v] > sigmaY[v])) {
+                Y.erase(v);
+                X.insert(v);
+                updateAdjacentNodes(v, SETY, "remove");
+                updateAdjacentNodes(v, SETX, "add");
+                change = true;
+            }
         }
-    }
-}
-
-void GRASP(ll maxItrs) {
-    for (int i=1; i<=maxItrs; i++) {
-        randomizedMaxCut();
-        localSearch();
     }
 }
 
@@ -231,8 +262,22 @@ ll getValue() {
     return val;
 }
 
+ll GRASP(ll maxItrs) {
+    ll maxVal = LONG_LONG_MIN;
+
+    for (int i=1; i<=maxItrs; i++) {
+        semiGreedyMaxCut();
+        localSearch();
+        maxVal = max(maxVal, getValue());
+    }
+
+    return maxVal;
+}
+
+
+
 int main() {
-    fstream cin("Test_Cases/g35.rud");
+    fstream cin("input.txt");
 	ll e, n, a, b, w;
 	cin >> n >> e;
 
@@ -243,6 +288,9 @@ int main() {
         V.insert(a);
         V.insert(b);
 
+        adj[a].push_back({b, w});
+        adj[b].push_back({a, w}); // undirected graph
+
         if (w > maxwt) {
             maxwt = w;
             maxWeightEdge = {a, b};
@@ -250,7 +298,7 @@ int main() {
 	}
 
     semiGreedyMaxCut();
-    printSets();
+    // printSets();
     cout << "Value: " << getValue() << endl;
 
     // cout << "\n\n\nAfter local search" << endl;
@@ -267,9 +315,9 @@ int main() {
     // cout << "Value: " << getValue() << endl;
 
     cout << "After GRASP" << endl;
-    GRASP(10);
-    printSets();
-    cout << "Value: " << getValue() << endl;
+    ll maxVal = GRASP(10);
+    cout << "MaxCut: " << maxVal << endl;
+    // printSets();
 
     return 0;
 }
